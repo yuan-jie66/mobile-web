@@ -1,0 +1,104 @@
+body{
+    background-color: #f7f7f8;
+}
+
+/* 公共样式 */
+.red{
+    color:  #cf4444;
+}
+.main{
+    /* 80px：为了内容不被底部区域盖住 */
+    padding: 12px 11px 80px;
+}
+
+/* 主体：滑动 */
+
+.main .pannel{
+    background-color: #ffffff;
+    border-radius: 5px;
+
+}
+
+/* 用户信息 */
+.main .user_info{
+    display: flex;
+    align-items: center;
+    padding: 15px 0 15px 11px;
+}
+.main .location{
+    margin-right: 10px;
+
+    width: 33px;
+    height: 33px;
+    color: #ffffff;
+    background-image: linear-gradient(90deg, 
+    #6fc2aa 5%, 
+    #54b196 100%);
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+.main .user_info .user{
+    flex: 1;
+}
+.main .user_info .user .top{
+    display: flex;
+}
+.main .user_info .user .top span{
+    width: 55px;
+    font-size: 15px;
+}
+.main .user_info .user .top i{
+    font-size: 13px;
+}
+.main .user_info .user .bottom{
+    margin-top: 2px;
+    font-size: 12px;
+}
+
+.main .user_info .more{
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+}
+/* 主体：滑动 */
+
+/* 底部固定 */
+.pay {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+
+    width: 100%;
+    height: 79px;
+    /* background-color: pink; */
+    padding: 0 11px;
+}
+.pay .left{
+    display: flex;
+    align-items: center;
+}
+.pay .left span{
+    font-size: 22px;    
+}
+
+.pay .right a{
+    display: block;
+    width: 90px;
+    height: 35px;
+    background-image: linear-gradient(90deg, 
+    #6fc2aa 5%, 
+    #54b196 100%);
+    border-radius: 5px;
+    text-align: center;
+    line-height: 35px;
+    font-size: 13px;
+    color: #ffffff;
+}
+/* 底部固定 */

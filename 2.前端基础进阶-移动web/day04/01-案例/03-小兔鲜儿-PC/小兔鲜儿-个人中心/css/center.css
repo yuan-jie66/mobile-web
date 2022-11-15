@@ -1,0 +1,242 @@
+.xtx_body{
+    padding: 30px 0 85px;
+    background-color: #f6f6f6;
+}
+
+.xtx_body .wrapper{
+    display: flex;
+}
+
+/* 侧边栏 */
+.xtx_body .aside{
+    display: flex;
+    flex-direction: column;
+    width: 227px;
+    min-height: 500px;
+    margin-right: 18px;
+    background-color: #ffffff;
+}
+
+.xtx_body .aside .top_pannel{
+    height: 231px;
+    display: block;
+    /* background-color: #5eb69c; */
+    border-bottom: 1px solid #f4f4f4;
+}
+.xtx_body .aside .top{
+    margin: 47px auto 0px;
+    width: 85px;
+    height: 85px;
+}
+.xtx_body .aside .top .vip{
+    text-align: center;
+    width: 93px;
+    height: 26px;
+    background-color: #e05e2f;
+    border-radius: 13px;
+    line-height: 26px;
+    font-size: 14px;
+    color: #fff;
+}
+.xtx_body .aside .top .vip img{
+    width: 15px;
+    height: 16px;
+}
+
+.xtx_body .aside .bottom div{
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+}
+.xtx_body .aside .bottom div h4{
+    font-weight: 400;
+    margin-bottom: 34px;
+}
+.xtx_body .aside .bottom div .h4{
+    font-size: 18px;
+    color:#333;
+}
+.xtx_body .aside .bottom div a{
+    margin-bottom: 22px;
+    font-size: 14px;
+    color: #666666;
+}
+.xtx_body .aside .bottom div a:last-child{
+    margin-bottom: 0;
+}
+.xtx_body .aside .bottom div a:hover{
+    color: #5cb99e;
+}
+
+
+.xtx_body .aside p{
+    margin-top: 14px;
+    text-align: center;
+    font-size: 18px;
+    color: #333333;
+}
+
+/* 主体内容 */
+.xtx_body .main{
+    /* width: ; */
+    flex: 1;
+    min-height: 500px;
+    /* background-color: skyblue; */
+}
+
+/* 账户概览 */
+.overview{
+    display: flex;
+    height: 132px;
+    background-color: #fff;
+    padding: 20px 0;
+    margin-bottom: 18px;
+}
+.overview div{
+    /* 让a在一行显示 */
+    display: flex;
+    justify-content: space-evenly;
+
+    /* 侧轴居中 */
+    align-items: center;
+    flex: 1;
+    text-align: center;
+
+}
+.overview div:first-child{
+    border-right: 1px solid #f4f4f4;
+}
+
+.overview div a img{
+    width: 25px;
+    margin-bottom: 10px;
+}
+
+.overview div a span{
+    /* 字加大了  所以字的浏览器默认的行高也加大了，就不用margin了 */
+    font-size: 25px;
+    color: #e05e30;
+}
+
+.overview div p{
+    font-size: 16px;
+}
+
+
+/* 把概览区域最后一个图变宽度为18px */
+/* overview的div 里面的最后一个a里面的img */
+.overview div a:last-child img{
+    width: 18px;
+}
+
+
+/* 公共样式 */
+.pannel{
+    padding: 28px 20px;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+
+.pannel .pannel_title{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #f4f4f4;
+}
+.pannel .pannel_title h4{
+    font-size: 22px;
+    color: #333;
+    font-weight: 400;
+}
+.pannel .pannel_title a{
+    margin-top: 8px;
+    font-size: 16px;
+    color: #999999;
+}
+
+
+/* 订单 */
+.orders li{
+    display: flex;
+    height: 137px;
+    margin-top: -1px;
+    margin-bottom: 20px;
+    border: 1px solid #f4f4f4;
+}
+.orders li:last-child{
+    margin-bottom: 0px;
+}
+
+.orders li .goods{
+    display: flex;
+    align-items: center;
+    padding: 17px 0 14px 12px;
+
+    flex: 1;
+    margin-right: 120px;
+}
+
+.orders .goods .pic{
+    width: 107px;
+}
+.orders li .status{
+    width: 120px;
+}
+.orders .goods .txt{
+    /* 让字出省略号 */
+    flex: 1;
+    /* 为了溢出的时候 ，显示省略号 */
+    /* 因为弹性盒子的尺寸可以被内容撑开（给overflow hindden用） */
+    width: 0;
+}
+.orders .goods .txt h5{
+    /* 让字出省略号 */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+
+    font-weight: 400;
+    font-size: 16px;
+    color: #333333;
+}
+
+.orders li .pay{
+    width: 200px;
+    border-left: 1px solid #e8e8e8;
+    border-right: 1px solid #e8e8e8;
+}
+
+.orders li .action{
+    width: 180px;
+}
+
+.orders li .common{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.orders li .action a:first-child{
+    text-align: center;
+    line-height: 30px;
+    width: 100px;
+    height: 30px;
+    background-color: #5eb69c;
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.orders li .status{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #e05e30;
+}
+.orders li .status a{
+    margin-top: 2px;
+    color: #999999;
+}

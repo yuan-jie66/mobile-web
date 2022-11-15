@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    background: url(../images/f1_1.jpg) no-repeat center;
+
+    /* 缩放背景图 */
+
+    /* 图片等比例缩放，当宽或高等于盒子尺寸相等，图片就不再缩放了 */
+    /* background-size: contain; */
+
+    /* 图片会等比例缩放，图片完全覆盖到整个盒子，可能会导致图片显示不全 */
+    background-size: cover;
+}
+
+/* 
+1.img 引入图片，控制位置
+2.定义动画，使用动画
+*/
+
+
+/* 云彩图片 */
+.cloud img{
+    position: absolute;
+    left: 50%;
+    top: 0;
+}
+
+.cloud img:nth-child(1){
+    margin-left: -300px;
+    top: 20px;
+    animation: cloud 1s infinite alternate linear;
+}
+
+.cloud img:nth-child(2){
+    margin-left: 400px ;
+    top: 100px;
+    animation: cloud 1s infinite alternate linear 0.2s;
+}
+
+.cloud img:nth-child(3){
+    margin-left: -550px ;
+    top: 200px;
+    animation: cloud 1s infinite alternate linear 0.4s; 
+}
+
+/* 云彩动画 */
+@keyframes cloud{
+    to{
+        transform: translateX(20px);
+    }
+}
+
+
+.flag img{
+    width: 70px;
+    position: absolute;
+    left: 347px;
+    top: 520px;
+    animation: flag 1s infinite linear alternate;
+}
+
+.flag img:nth-child(2){
+    margin-left: 215px;
+    animation: flag 1s infinite 0.2s linear alternate;
+}
+.flag img:nth-child(3){
+    margin-left: 430px;
+    animation: flag 1s infinite 0.1s linear alternate;
+}
+.flag img:nth-child(4){
+    margin-left: 645px;
+    animation: flag 1s infinite 0.3s linear alternate;
+}
+
+/* 标志动画 */
+@keyframes flag{
+    to{
+        transform: translateY(-30px);
+    }
+}
+

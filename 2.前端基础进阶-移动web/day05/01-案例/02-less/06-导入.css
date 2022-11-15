@@ -1,0 +1,28 @@
+.father {
+  width: 100px;
+}
+.father .son {
+  color: pink;
+}
+.father .son:hover {
+  color: green;
+}
+.father:hover {
+  color: orange;
+}
+.box {
+  width: 120px;
+  width: 80px;
+  width: 200px;
+  width: 1.81333333rem;
+  height: 0.77333333rem;
+}
+.box {
+  color: green;
+}
+.father {
+  background-color: green;
+}
+.aa {
+  color: green;
+}

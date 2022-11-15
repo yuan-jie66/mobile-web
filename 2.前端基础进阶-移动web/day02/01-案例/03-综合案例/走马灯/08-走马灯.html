@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      li {
+        list-style: none;
+      }
+
+      img {
+        width: 200px;
+      }
+      
+      .box {
+        width: 600px;
+        height: 112px;
+        border: 5px solid #000;
+        margin: 100px auto;
+
+        /* 溢出隐藏 */
+        overflow: hidden;
+      }
+      
+      .box ul{
+        /* 原本七张图，为了无缝，所以加一开始前3张显示区域的图 */
+        width: 2000px;
+
+        /* 给li也行，反正是让所有图片一直动 */
+        animation: move 5s infinite linear;
+      }
+      .box li{
+        float: left;
+      }
+
+      /* 定义动画：位移,ul  左侧移动   x  -1400*/
+      @keyframes move{
+        to{
+          transform: translateX(-1400px);
+        }
+      }
+
+
+      /* 用户鼠标移入box，动画暂停 */
+      .box:hover ul{
+        /* 停在正在播放的区域*/
+        animation-play-state: paused;
+
+        /* 停到开始区域 */
+        /* animation: paused; */
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <ul>
+        <li><img src="./images/1.jpg" alt="" /></li>
+        <li><img src="./images/2.jpg" alt="" /></li>
+        <li><img src="./images/3.jpg" alt="" /></li>
+        <li><img src="./images/4.jpg" alt="" /></li>
+        <li><img src="./images/5.jpg" alt="" /></li>
+        <li><img src="./images/6.jpg" alt="" /></li>
+        <li><img src="./images/7.jpg" alt="" /></li>
+
+        <!-- 第567移动的时候,显示区域不能留白 -->
+        <li><img src="./images/1.jpg" alt="" /></li>
+        <li><img src="./images/2.jpg" alt="" /></li>
+        <li><img src="./images/3.jpg" alt="" /></li>
+      </ul>
+    </div>
+  </body>
+</html>

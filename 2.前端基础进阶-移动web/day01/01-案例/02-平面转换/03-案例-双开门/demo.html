@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            width: 1366px;
+            height: 600px;
+            margin: 0 auto;
+            background: url('./images/bg.jpg');
+
+            /* 溢出（超出）父级范围，需要隐藏 */
+            overflow: hidden;
+        }
+        
+        /* 左右相同的样式 */
+        /* 伪元素：行内显示模式 */
+        .box::before,
+        .box::after{
+            float: left;
+            content: "";
+            width: 50%;
+            height: 600px;
+            background-image: url(./images/fm.jpg);
+            transition: all 0.5s;
+        }
+
+        /* 单独控制aftere的背景图位置 */
+        .box::after{  
+            background-position: right;
+        }
+ 
+        /* *************************鼠标移入box，before向左移动  100% - */
+        .box:hover::before{
+            transform: translate(-100%);
+        }
+        /* *************************鼠标移入after，after向右移动  + */
+        .box:hover::after{
+            /* transform: translate(100%,0); */
+            transform: translateX(100%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <!-- 手写两个div；用css伪元素before after -->
+    </div>
+</body>
+
+</html>
